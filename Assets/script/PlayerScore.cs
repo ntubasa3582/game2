@@ -4,25 +4,40 @@ using UnityEngine;
 
 public class PlayerScore : MonoBehaviour
 {
-    int _OpenScore = 4;
-    BlockScore _blockScore;
-    bool _isOpen = false;
+    int _openScore = 4;
+    BlockScore[] _blockScore;
+    private int _score = 0;
+    public int Score => _score;
+
     // Start is called before the first frame update
     void Start()
     {
-        GameObject obj = GameObject.Find("Player");
-        _blockScore = obj.GetComponent<BlockScore>();
+        GameObject[] obj = GameObject.FindGameObjectsWithTag("box");
+        _blockScore = new BlockScore[obj.Length];
+        for (int i = 0; i < obj.Length; i++)
+        {
+            _blockScore[i] = obj[i].GetComponent<BlockScore>();
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_OpenScore <= _blockScore._score1) 
-        {
-            
-        }
+        //if (_blockScore[0]._score1 == _OpenScore)
+        //{
+        //    Debug.Log("ƒI[ƒvƒ“");
+        //    _isOpen++;
+        //}
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    public void AddScore(int addScore)
     {
+        _score += addScore;
+    }
+
+    public void ResetScore() 
+    {
+        _score = 0;
     }
 }

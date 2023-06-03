@@ -319,7 +319,7 @@ GameObject:
   - component: {fileID: 191484430}
   m_Layer: 0
   m_Name: 1701
-  m_TagString: box1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -552,6 +552,7 @@ GameObject:
   - component: {fileID: 484621268}
   - component: {fileID: 484621267}
   - component: {fileID: 484621269}
+  - component: {fileID: 484621270}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -646,7 +647,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &484621268
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -676,6 +677,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 10
+--- !u!114 &484621270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484621264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1d989e1dc1588b4f9bc4e1dbb1cd0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &744262975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -689,7 +702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 447818037081899458, guid: 46b9ab5bbc8ec3f44bd84c2838455216, type: 3}
       propertyPath: m_TagString
-      value: box2
+      value: box
       objectReference: {fileID: 0}
     - target: {fileID: 4932663978434754709, guid: 46b9ab5bbc8ec3f44bd84c2838455216, type: 3}
       propertyPath: m_IsTrigger
@@ -774,7 +787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 447818037081899458, guid: 46b9ab5bbc8ec3f44bd84c2838455216, type: 3}
       propertyPath: m_TagString
-      value: box3
+      value: box
       objectReference: {fileID: 0}
     - target: {fileID: 4932663978434754709, guid: 46b9ab5bbc8ec3f44bd84c2838455216, type: 3}
       propertyPath: m_IsTrigger
@@ -859,7 +872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 447818037081899458, guid: 46b9ab5bbc8ec3f44bd84c2838455216, type: 3}
       propertyPath: m_TagString
-      value: box4
+      value: box
       objectReference: {fileID: 0}
     - target: {fileID: 4932663978434754709, guid: 46b9ab5bbc8ec3f44bd84c2838455216, type: 3}
       propertyPath: m_IsTrigger
@@ -945,12 +958,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1210385158}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bc743e41b3a2844490be074bbe73bc5, type: 3}
+  m_Script: {fileID: 11500000, guid: 62836f6dd6d67c7439644dd657a18f78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _openScore: 0
-  _mondai1: {fileID: 0}
-  _isOpen: 0
+  _door1:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &1367932453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1047,7 +1061,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 447818037081899458, guid: 46b9ab5bbc8ec3f44bd84c2838455216, type: 3}
       propertyPath: m_TagString
-      value: box1
+      value: box
       objectReference: {fileID: 0}
     - target: {fileID: 4932663978434754709, guid: 46b9ab5bbc8ec3f44bd84c2838455216, type: 3}
       propertyPath: m_IsTrigger
