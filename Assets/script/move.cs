@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class move : MonoBehaviour
+public class Move : MonoBehaviour
 {
     [SerializeField] float _moveSpeed;
     Rigidbody2D _rb;
@@ -16,5 +16,9 @@ public class move : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
         _rb.velocity = new Vector2(x, y) * _moveSpeed;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
     }
 }
