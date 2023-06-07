@@ -9,7 +9,6 @@ public class BlockScore : MonoBehaviour
     [SerializeField]
     int _score1 = 1;
     bool _switch = true;
-    //int _switch2 = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +31,6 @@ public class BlockScore : MonoBehaviour
                 
                 _switch = false;
                 Debug.Log("“–‚½‚Á‚½");
-                //_switch2++;
             }
         }
     }

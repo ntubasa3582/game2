@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class doorkey : MonoBehaviour
+public class Doorkey : MonoBehaviour
 {
     [SerializeField]
     GameObject[] _door1;

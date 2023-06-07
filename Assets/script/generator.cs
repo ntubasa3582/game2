@@ -2,32 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class generator : MonoBehaviour
+public class Generator : MonoBehaviour
 {
     [SerializeField] GameObject _circleprefab = default;
     [SerializeField] float _interval = 1f;
     [SerializeField] bool _generatorOnstart = true;
     [SerializeField] int _leftPos;
     [SerializeField] int _rightPos;
+    [SerializeField] Open1 _open;
     PlayerScore _playerScore;
+    //GameObject _cen;
+    //Open1 _open;
     float _timer;
     // Start is called before the first frame update
     void Start()
     {
+        //_cen = GameObject.Find("censor");
         if (_generatorOnstart)
         {
             _timer = _interval;
         }
-        _playerScore = GetComponent<PlayerScore>();
+
+        PlayerScore _playerScore = GetComponent<PlayerScore>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
         _timer += Time.deltaTime;
         int random = Random.Range(_leftPos, _rightPos);
-        if(_playerScore._count == 1)
+        if (_open._swich == true)
         {
+            Debug.Log("true");
             if (_timer > _interval)
             {
                 _timer = 0;
@@ -38,5 +45,5 @@ public class generator : MonoBehaviour
 
     }
 
-
 }
+

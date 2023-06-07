@@ -6,6 +6,7 @@ TagManager:
   tags:
   - box
   - rain
+  - censor2
   layers:
   - Default
   - TransparentFX

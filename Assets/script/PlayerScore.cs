@@ -29,11 +29,6 @@ public class PlayerScore : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        if (this.transform.position.x >= 41) 
-        {
-            _count++;
-            Debug.Log("オーバー");
-        }
     }
 
     public void AddScore(int addScore)
@@ -45,6 +40,8 @@ public class PlayerScore : MonoBehaviour
     {
         _score = 0;
     }
+    
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "rain")
