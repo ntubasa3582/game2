@@ -17,8 +17,4 @@ public class Move : MonoBehaviour
         float y = Input.GetAxisRaw("Vertical");
         _rb.velocity = new Vector2(x, y) * _moveSpeed;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-
-    }
 }

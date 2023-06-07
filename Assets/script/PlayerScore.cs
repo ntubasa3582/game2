@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Unity.Burst.Intrinsics.X86.Avx;
 
 public class PlayerScore : MonoBehaviour
 {
@@ -8,27 +9,31 @@ public class PlayerScore : MonoBehaviour
     BlockScore[] _blockScore;
     private int _score = 0;
     public int Score => _score;
+    public int _count = 0;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
+        Transform transform = GetComponent<Transform>();
         GameObject[] obj = GameObject.FindGameObjectsWithTag("box");
         _blockScore = new BlockScore[obj.Length];
         for (int i = 0; i < obj.Length; i++)
         {
-            _blockScore[i] = obj[i].GetComponent<BlockScore>();
+            _blockScore[i] = obj[i].GetComponent<BlockScore>(); 
         }
 
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        //if (_blockScore[0]._score1 == _OpenScore)
-        //{
-        //    Debug.Log("オープン");
-        //    _isOpen++;
-        //}
+        if (this.transform.position.x >= 41) 
+        {
+            _count++;
+            Debug.Log("オーバー");
+        }
     }
 
     public void AddScore(int addScore)
@@ -39,5 +44,12 @@ public class PlayerScore : MonoBehaviour
     public void ResetScore() 
     {
         _score = 0;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "rain")
+        {
+            transform.position = new Vector2(40f, 6f);
+        }
     }
 }

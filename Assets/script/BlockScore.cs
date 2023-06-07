@@ -20,10 +20,6 @@ public class BlockScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (_switch2 >= 1)
-        //{
-        //    _switch = false;
-        //}
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
