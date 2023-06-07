@@ -34,7 +34,6 @@ public class Generator : MonoBehaviour
         int random = Random.Range(_leftPos, _rightPos);
         if (_open._swich == true)
         {
-            Debug.Log("true");
             if (_timer > _interval)
             {
                 _timer = 0;

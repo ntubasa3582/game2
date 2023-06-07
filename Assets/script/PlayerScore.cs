@@ -46,7 +46,14 @@ public class PlayerScore : MonoBehaviour
     {
         if(collision.gameObject.tag == "rain")
         {
-            transform.position = new Vector2(40f, 6f);
+            transform.position = new Vector2(40f, 0f);
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "warp")
+        {
+            transform.position = new Vector2(-30f, 62.5f);
         }
     }
 }
