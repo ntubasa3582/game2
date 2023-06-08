@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Generator : MonoBehaviour
+public class GeneratorW : MonoBehaviour
 {
     [SerializeField] GameObject _circleprefab = default;
     [SerializeField] float _interval = 1f;
@@ -11,12 +11,14 @@ public class Generator : MonoBehaviour
     [SerializeField] int _rightPos;
     [SerializeField] Open1 _open;
     PlayerScore _playerScore;
+    SpriteRenderer _obg = default;
     //GameObject _cen;
     //Open1 _open;
     float _timer;
     // Start is called before the first frame update
     void Start()
     {
+        _obg = GetComponent<SpriteRenderer>();
         //_cen = GameObject.Find("censor");
         if (_generatorOnstart)
         {
@@ -36,6 +38,7 @@ public class Generator : MonoBehaviour
         {
             if (_timer > _interval)
             {
+                _obg.color = Color.white;
                 _timer = 0;
                 var trashPos = new Vector3(random, transform.position.y, transform.position.z);
                 Instantiate(_circleprefab, trashPos, Quaternion.identity);
