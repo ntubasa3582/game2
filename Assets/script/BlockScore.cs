@@ -44,6 +44,7 @@ public class BlockScore : MonoBehaviour
         {
             _obg.color = Color.black;
             _obg.sortingOrder = _orderInLayer;
+            _boxCollider.enabled = false;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
