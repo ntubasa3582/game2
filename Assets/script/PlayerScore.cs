@@ -53,7 +53,7 @@ public class PlayerScore : MonoBehaviour
     {
         if (collision.gameObject.tag == "warp")
         {
-            transform.position = new Vector2(-30f, 62.5f);
+            transform.position = new Vector2(115f, 0f);
         }
     }
 }

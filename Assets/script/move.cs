@@ -18,4 +18,12 @@ public class Move : MonoBehaviour
         float y = Input.GetAxisRaw("Vertical");
         _rb.velocity = new Vector2(x, y) * _moveSpeed;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "movewall")
+        {
+            transform.position = new Vector2(115f, 0f);
+        }
+    }
 }

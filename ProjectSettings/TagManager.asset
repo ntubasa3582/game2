@@ -8,6 +8,7 @@ TagManager:
   - rain
   - censor2
   - warp
+  - movewall
   layers:
   - Default
   - TransparentFX

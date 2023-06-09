@@ -11,6 +11,7 @@ public class Bwcolor : MonoBehaviour
     {
         _obg = GetComponent<SpriteRenderer>();
         _boxCollider = GetComponent<BoxCollider2D>();
+        _obg.sortingOrder = -1;
 
     }
 
