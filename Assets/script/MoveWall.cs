@@ -17,6 +17,6 @@ public class MoveWall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(Mathf.Sin(Time.time) * _pos + 150 ,_posy ,targetpos.z);
+        transform.position = new Vector2(Mathf.Sin(Time.time) * _pos + 150 ,_posy);
     }
 }

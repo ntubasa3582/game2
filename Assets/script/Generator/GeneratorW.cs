@@ -12,6 +12,8 @@ public class GeneratorW : MonoBehaviour
     [SerializeField] Open1 _open;
     PlayerScore _playerScore;
     SpriteRenderer _obg = default;
+
+    bool _Active = true;
     //GameObject _cen;
     //Open1 _open;
     float _timer;
@@ -34,7 +36,7 @@ public class GeneratorW : MonoBehaviour
 
         _timer += Time.deltaTime;
         int random = Random.Range(_leftPos, _rightPos);
-        if (_open._swich == true)
+        if (_open._swich == true && _Active == true)
         {
             if (_timer > _interval)
             {
@@ -43,6 +45,17 @@ public class GeneratorW : MonoBehaviour
                 var trashPos = new Vector3(random, transform.position.y, transform.position.z);
                 Instantiate(_circleprefab, trashPos, Quaternion.identity);
             }
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            _Active = true;
+            Debug.Log(_Active);
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            _Active = false;
+            Debug.Log(_Active);
         }
 
     }

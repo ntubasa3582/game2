@@ -21,7 +21,7 @@ public class Move : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "movewall")
+        if(collision.gameObject.tag == "wa2" || collision.gameObject.tag =="tri")
         {
             transform.position = new Vector2(115f, 0f);
         }

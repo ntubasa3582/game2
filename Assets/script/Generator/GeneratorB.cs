@@ -16,7 +16,7 @@ public class GeneratorB : MonoBehaviour
     public int _count = 0;
     float _timer;
     public GameObject _rainobj;
-
+    bool _Active = true;
     Color _color;
     // Start is called before the first frame update
     void Start()
@@ -40,7 +40,7 @@ public class GeneratorB : MonoBehaviour
 
         _timer += Time.deltaTime;
         int random = Random.Range(_leftPos, _rightPos);
-        if (_open._swich == true)
+        if (_open._swich == true && _Active == true)
         {
             if (_timer > _interval)
             {
@@ -51,19 +51,27 @@ public class GeneratorB : MonoBehaviour
             }
         }
 
-
-
+        if(Input.GetMouseButtonDown(0))
+        {
+            _Active = false;
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            _Active = true;
+        }
     }
 
     public Color ChangeColor()
     {
         if(Input.GetMouseButtonDown(0))
         {
-            _color = Color.black;
+            _color = Color.white;
+            
         }
         else if (Input.GetMouseButtonDown(1))
         {
             _color = Color.white;
+            
         }
 
         return _color;
