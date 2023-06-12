@@ -8,9 +8,8 @@ TagManager:
   - rain
   - censor2
   - movewall
-  - wa
-  - wa2
   - tri
+  - stick
   layers:
   - Default
   - TransparentFX
