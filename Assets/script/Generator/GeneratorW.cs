@@ -50,12 +50,12 @@ public class GeneratorW : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             _Active = true;
-            Debug.Log(_Active);
+            //Debug.Log(_Active);
         }
         if (Input.GetMouseButtonDown(1))
         {
             _Active = false;
-            Debug.Log(_Active);
+            //Debug.Log(_Active);
         }
 
     }

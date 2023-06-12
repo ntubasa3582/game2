@@ -3,10 +3,10 @@ using UnityEngine;
 public class BlockScore : MonoBehaviour
 {
     [SerializeField] private int _orderInLayer = 0;
-    [SerializeField] int _xpos;
-    [SerializeField] int _xpos2;
-    [SerializeField] int _ypos;
-    [SerializeField] int _ypos2;
+    [SerializeField] float _xpos;
+    [SerializeField] float _xpos2;
+    [SerializeField] float _ypos;
+    [SerializeField] float _ypos2;
     [SerializeField]
     int _score1 = 1;
     bool _switch = true;
@@ -20,8 +20,8 @@ public class BlockScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int _random1 = Random.Range(_xpos, _xpos2);
-        int _random2 = Random.Range(_ypos, _ypos2);
+        float _random1 = Random.Range(_xpos, _xpos2);
+        float _random2 = Random.Range(_ypos, _ypos2);
 
 
         _obg = GetComponent<SpriteRenderer>();
@@ -57,7 +57,7 @@ public class BlockScore : MonoBehaviour
                 playerScore.AddScore(_score1);
                 
                 _switch = false;
-                Debug.Log("“–‚½‚Á‚½");
+                //Debug.Log(_score1);
             }
         }
     }

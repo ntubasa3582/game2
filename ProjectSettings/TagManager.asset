@@ -7,8 +7,10 @@ TagManager:
   - box
   - rain
   - censor2
-  - warp
   - movewall
+  - wa
+  - wa2
+  - tri
   layers:
   - Default
   - TransparentFX

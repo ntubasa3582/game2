@@ -25,7 +25,6 @@ public class Open1 : MonoBehaviour
         {
             _count++;
             _count++;
-            Debug.Log(_count);
         }
     }
 }

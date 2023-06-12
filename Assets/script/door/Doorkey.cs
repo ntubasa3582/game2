@@ -7,9 +7,11 @@ public class Doorkey : MonoBehaviour
 {
     [SerializeField]
     GameObject[] _door1;
-
+    int _count = 0;
     PlayerScore _playerScore;
     int _key = 4;
+    int _key2 = 8;
+    //int _num = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,13 @@ public class Doorkey : MonoBehaviour
         {
             _door1[0].SetActive(false);
             _playerScore.ResetScore();
+            _count += 2;
+            //  Debug.Log(_count);
         }
+        if(5 <= _playerScore.Score && 2 <= _count)
+        {
+            //Debug.Log("‚ ‚¢‚¤");
+        }
+
     }
 }

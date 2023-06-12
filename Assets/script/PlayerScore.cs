@@ -34,6 +34,7 @@ public class PlayerScore : MonoBehaviour
     public void AddScore(int addScore)
     {
         _score += addScore;
+        Debug.Log(_score);
     }
 
     public void ResetScore() 

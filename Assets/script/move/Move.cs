@@ -25,5 +25,9 @@ public class Move : MonoBehaviour
         {
             transform.position = new Vector2(115f, 0f);
         }
+        else if(collision.gameObject.tag == "stick")
+        {
+            transform.position = new Vector2(193f, 0f);
+        }
     }
 }

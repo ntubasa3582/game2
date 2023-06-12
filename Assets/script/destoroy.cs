@@ -6,7 +6,7 @@ public class Destoroy : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "rain")
+        if (collision.gameObject.tag == "rain"|| collision.gameObject.tag == "box")
         {
         }
         else
