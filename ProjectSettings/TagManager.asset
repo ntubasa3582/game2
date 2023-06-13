@@ -13,11 +13,12 @@ TagManager:
   - wall
   - wall2
   - qube
+  - movewall
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 
