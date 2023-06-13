@@ -7,9 +7,12 @@ TagManager:
   - box
   - rain
   - censor2
-  - movewall
   - tri
   - stick
+  - Movewall
+  - wall
+  - wall2
+  - qube
   layers:
   - Default
   - TransparentFX

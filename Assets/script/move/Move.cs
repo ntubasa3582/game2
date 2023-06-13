@@ -21,13 +21,5 @@ public class Move : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "wa2" || collision.gameObject.tag =="tri")
-        {
-            transform.position = new Vector2(115f, 0f);
-        }
-        else if(collision.gameObject.tag == "stick")
-        {
-            transform.position = new Vector2(193f, 0f);
-        }
     }
 }

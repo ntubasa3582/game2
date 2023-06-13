@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveWall : MonoBehaviour
 {
-    [SerializeField] float _pos;
+    [SerializeField] float _posx;
     [SerializeField] float _posy;
     private Vector3 targetpos;
 
@@ -17,6 +17,7 @@ public class MoveWall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector2(Mathf.Sin(Time.time) * _pos + 150 ,_posy);
+        transform.position = new Vector2(Mathf.Cos(Time.time) * _posx +  322,_posy);
+        //transform.position = new Vector2(Mathf.Cos(Time.time) * _pos + 322, _posy);
     }
 }

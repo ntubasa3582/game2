@@ -32,19 +32,21 @@ public class BlockScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        _obg.sortingOrder = 0;
+        _obg.color = Color.white;
         if (Input.GetMouseButtonDown(1))
         {
             _obg.color = Color.white;
-            _boxCollider.enabled = true;
+            //_boxCollider.enabled = true;
 
             //spriteRenderer.sortingOrder ... OrderInLayerÇÃílÇéQè∆Ç∑ÇÈ
             _obg.sortingOrder = 0;
         }
         if (Input.GetMouseButtonDown(0))
         {
-            _obg.color = Color.black;
-            _obg.sortingOrder = _orderInLayer;
-            _boxCollider.enabled = false;
+            //_obg.color = Color.black;
+            //_obg.sortingOrder = _orderInLayer;
+            //_boxCollider.enabled = false;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
