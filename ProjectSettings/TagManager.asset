@@ -13,7 +13,7 @@ TagManager:
   - wall
   - wall2
   - qube
-  - movewall
+  - MoveObject
   layers:
   - Default
   - TransparentFX

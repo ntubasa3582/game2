@@ -5,7 +5,7 @@ using UnityEngine;
 public class Doorkey3 : MonoBehaviour
 {
 
-    [SerializeField] GameObject _door2;
+    [SerializeField] GameObject _door3;
     PlayerScore _playerScore;
     int _key = 12;
     // Start is called before the first frame update
@@ -20,9 +20,9 @@ public class Doorkey3 : MonoBehaviour
     {
         if (_key <= _playerScore.Score)
         {
-            Debug.Log("12");
+            //Debug.Log("12");
             _playerScore.ResetScore();
-            _door2.SetActive(false);
+            _door3.SetActive(false);
         }
     }
 }

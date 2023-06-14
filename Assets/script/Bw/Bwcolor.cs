@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bwcolor : MonoBehaviour
@@ -30,6 +31,7 @@ public class Bwcolor : MonoBehaviour
             _obg.sortingOrder = 0;
             _boxCollider.enabled = true;
         }
+
 
     }
 }

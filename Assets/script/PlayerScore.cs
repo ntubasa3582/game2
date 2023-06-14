@@ -13,7 +13,6 @@ public class PlayerScore : MonoBehaviour
     public int _count = 0;
 
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -24,12 +23,12 @@ public class PlayerScore : MonoBehaviour
         {
             _blockScore[i] = obj[i].GetComponent<BlockScore>();
         }
-
     }
 
     // Update is called once per frame
     public void Update()
     {
+
     }
 
     public void AddScore(int addScore)
@@ -68,6 +67,10 @@ public class PlayerScore : MonoBehaviour
         if (collision.gameObject.tag == "qube")
         {
             transform.position = new Vector2(280f, 0f);
+        }
+        if(collision.gameObject.tag == "MoveObject")
+        {
+            transform.position = new Vector2(283f, 0f);
         }
     }
 
