@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Rotate : MonoBehaviour
 {
     [SerializeField]
     float rotSpeed = 0.1f;
-
+    public AudioClip _audioClip;
+    AudioSource _audioSource;
     bool _swicth;
-
+    private void Start()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
     void Update()
     {
         // transform‚ðŽæ“¾
@@ -25,7 +28,7 @@ public class Rotate : MonoBehaviour
         }
         if(Input.GetMouseButton(0))
         {
-
+            //_audioSource.PlayOneShot(_audioClip);
             _swicth = true;
         }
         if (Input.GetMouseButton(1))

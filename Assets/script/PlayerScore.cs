@@ -11,6 +11,8 @@ public class PlayerScore : MonoBehaviour
     private int _score = 0;
     public int Score => _score;
     public int _count = 0;
+    public AudioClip _sound1;
+    public AudioClip _sound2;
 
 
     // Start is called before the first frame update
@@ -70,7 +72,7 @@ public class PlayerScore : MonoBehaviour
         }
         if(collision.gameObject.tag == "MoveObject")
         {
-            transform.position = new Vector2(283f, 0f);
+            transform.position = new Vector2(280f, 0f);
         }
     }
 

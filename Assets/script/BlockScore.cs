@@ -10,6 +10,8 @@ public class BlockScore : MonoBehaviour
     [SerializeField]
     int _score1 = 1;
     bool _switch = true;
+    public AudioClip _audioClip;
+    AudioSource _audioSource;
 
     SpriteRenderer _obg = default;
     public GameObject obg;
@@ -20,6 +22,7 @@ public class BlockScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
         float _random1 = Random.Range(_xpos, _xpos2);
         float _random2 = Random.Range(_ypos, _ypos2);
 
@@ -57,8 +60,10 @@ public class BlockScore : MonoBehaviour
             {
                 PlayerScore playerScore = collision.gameObject.GetComponent<PlayerScore>();
                 playerScore.AddScore(_score1);
-                
+                //_audioSource.PlayOneShot(_audioClip);
+                AudioSource.PlayClipAtPoint(_audioClip, collision.gameObject.transform.position);
                 _switch = false;
+                Destroy(this.gameObject);
                 //Debug.Log(_score1);
             }
         }
