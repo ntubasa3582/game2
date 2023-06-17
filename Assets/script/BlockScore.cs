@@ -12,6 +12,7 @@ public class BlockScore : MonoBehaviour
     bool _switch = true;
     public AudioClip _audioClip;
     AudioSource _audioSource;
+    public int _textcount = 0;
 
     SpriteRenderer _obg = default;
     public GameObject obg;
@@ -63,6 +64,7 @@ public class BlockScore : MonoBehaviour
                 //_audioSource.PlayOneShot(_audioClip);
                 AudioSource.PlayClipAtPoint(_audioClip, collision.gameObject.transform.position);
                 _switch = false;
+                _textcount += 1;
                 Destroy(this.gameObject);
                 //Debug.Log(_score1);
             }

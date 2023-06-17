@@ -35,6 +35,5 @@ public class Doorkey5 : MonoBehaviour
         Debug.Log("Change");
         SceneManager.LoadScene("GameClear");
     }
-
-
 }
+

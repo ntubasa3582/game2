@@ -31,13 +31,13 @@ public class Doorkey : MonoBehaviour
             _door1[0].SetActive(false);
             _playerScore.ResetScore();
             _audioSource.PlayOneShot(_audioClip);
-            _count += 2;
+            //_count += 2;
             //  Debug.Log(_count);
         }
-        if(5 <= _playerScore.Score && 2 <= _count)
-        {
-            //Debug.Log("‚ ‚¢‚¤");
-        }
+        //if(5 <= _playerScore.Score && 2 <= _count)
+        //{
+        //    //Debug.Log("‚ ‚¢‚¤");
+        //}
 
     }
 }
