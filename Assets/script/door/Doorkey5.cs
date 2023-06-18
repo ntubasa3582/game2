@@ -25,7 +25,7 @@ public class Doorkey5 : MonoBehaviour
             ChangeScene();
             Debug.Log(20);
             _playerScore.ResetScore();
-            _audioSource.PlayOneShot(_audioClip);
+          //  _audioSource.PlayOneShot(_audioClip);
             ChangeScene();
         }
     }

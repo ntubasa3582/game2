@@ -12,11 +12,14 @@ public class PlayerText : MonoBehaviour
     [SerializeField] Text _text4;
     public int _textcount;
     public int _blockcount;
+    public AudioSource _audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         blockScore = GetComponent<BlockScore>();
+        _audioSource = GetComponent<AudioSource>();
+        _audioSource.enabled = false;
     }
 
     // Update is called once per frame
@@ -25,6 +28,9 @@ public class PlayerText : MonoBehaviour
         if(_blockcount >= 4)
         {
             _blockcount = 0;
+            _text4.text = _blockcount.ToString("0");
+            _audioSource.enabled = true;
+            
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -36,6 +42,7 @@ public class PlayerText : MonoBehaviour
         }
         else if(collision.gameObject.tag == "box")
         {
+            _audioSource.enabled=false;
             _blockcount++;
             _text4.text = _blockcount.ToString("0");
         }

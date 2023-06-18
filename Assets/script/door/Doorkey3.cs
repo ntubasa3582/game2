@@ -25,7 +25,7 @@ public class Doorkey3 : MonoBehaviour
         {
             //Debug.Log("12");
             _playerScore.ResetScore();
-            _source.PlayOneShot(_audioclip);
+           // _source.PlayOneShot(_audioclip);
             _door3.SetActive(false);
         }
     }

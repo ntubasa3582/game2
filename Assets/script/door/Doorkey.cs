@@ -9,7 +9,7 @@ public class Doorkey : MonoBehaviour
     GameObject[] _door1;
     int _count = 0;
     PlayerScore _playerScore;
-    AudioSource _audioSource;
+    public AudioSource _audioSource;
     public AudioClip _audioClip;
     int _key = 4;
     int _key2 = 8;
@@ -21,6 +21,7 @@ public class Doorkey : MonoBehaviour
         GameObject obj = GameObject.Find("Player");
         _playerScore = obj.GetComponent<PlayerScore>();
         _audioSource = obj.GetComponent<AudioSource>();
+        this._audioSource.enabled = false;
     }
 
     // Update is called once per frame
@@ -28,11 +29,11 @@ public class Doorkey : MonoBehaviour
     {
         if (_key <= _playerScore.Score)
         {
+            //_audioSource.enabled = true;
             _door1[0].SetActive(false);
             _playerScore.ResetScore();
-            _audioSource.PlayOneShot(_audioClip);
-            //_count += 2;
-            //  Debug.Log(_count);
+            //_audioSource.PlayOneShot(_audioClip);
+            
         }
         //if(5 <= _playerScore.Score && 2 <= _count)
         //{

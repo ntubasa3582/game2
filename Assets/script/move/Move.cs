@@ -9,11 +9,11 @@ public class Move : MonoBehaviour
     [SerializeField] float _moveSpeed;
     Rigidbody2D _rb;
     public AudioClip _audioClip;
-    AudioSource _audioSource;
+    //AudioSource _audioSource;
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _audioSource = GetComponent<AudioSource>();
+        //_audioSource = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -22,11 +22,14 @@ public class Move : MonoBehaviour
         _rb.velocity = new Vector2(x, y) * _moveSpeed;
         if(Input.GetMouseButtonDown(0)) 
         {
-            _audioSource.PlayOneShot(_audioClip);
+            //_audioSource.PlayOneShot(_audioClip);
         }
         if(Input.GetMouseButtonDown(1))
         {
-            _audioSource.PlayOneShot(_audioClip);
+
+           // _audioSource.PlayOneShot(_audioClip);
         }
+
+
     }
 }

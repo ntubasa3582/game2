@@ -25,7 +25,7 @@ public class Doorkey4 : MonoBehaviour
         {
             Debug.Log(16);
             _playerScore.ResetScore();
-            _source.PlayOneShot(_clip);
+          //  _source.PlayOneShot(_clip);
             _door4.SetActive(false);
         }
     }
