@@ -16,6 +16,7 @@ TagManager:
   - MoveObject
   - movewall
   - Stagecensor
+  - Item
   layers:
   - Default
   - TransparentFX

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using UnityEngine;
 using static Unity.Burst.Intrinsics.X86.Avx;
+using UnityEngine.UI;
 
 public class PlayerScore : MonoBehaviour
 {
@@ -13,11 +14,13 @@ public class PlayerScore : MonoBehaviour
     public int _count = 0;
     public AudioClip _sound1;
     public AudioClip _sound2;
-
-
+    public int _itemScoreText;
+    public static int _itemScore;
+    [SerializeField] public Text _text;
     // Start is called before the first frame update
     void Start()
     {
+        _text.text = _itemScore.ToString();
         Transform transform = GetComponent<Transform>();
         GameObject[] obj = GameObject.FindGameObjectsWithTag("box");
         _blockScore = new BlockScore[obj.Length];
@@ -25,14 +28,10 @@ public class PlayerScore : MonoBehaviour
         {
             _blockScore[i] = obj[i].GetComponent<BlockScore>();
         }
+        
     }
 
     // Update is called once per frame
-    public void Update()
-    {
-
-    }
-
     public void AddScore(int addScore)
     {
         _score += addScore;
@@ -73,6 +72,12 @@ public class PlayerScore : MonoBehaviour
         if(collision.gameObject.tag == "MoveObject")
         {
             transform.position = new Vector2(280f, 0f);
+        }
+        if(collision.gameObject.tag == "Item")
+        {
+            _itemScore++;
+            _text.text = _itemScore.ToString();
+            Destroy(collision.gameObject);
         }
     }
 

@@ -36,8 +36,6 @@ public class GeneratorB : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-
-
         _timer += Time.deltaTime;
         int random = Random.Range(_leftPos, _rightPos);
         if (_open._swich == true && _Active == true)

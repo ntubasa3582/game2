@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BlockScore : MonoBehaviour
 {
-    [SerializeField] private int _orderInLayer = 0;
+    [SerializeField] private int _orderInLayer = 0; 
     [SerializeField] float _xpos;
     [SerializeField] float _xpos2;
     [SerializeField] float _ypos;

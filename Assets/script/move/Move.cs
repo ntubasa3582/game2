@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    [SerializeField] float _moveSpeed;
+    [SerializeField]public float _moveSpeed;
     Rigidbody2D _rb;
     public AudioClip _audioClip;
     //AudioSource _audioSource;
@@ -29,7 +29,6 @@ public class Move : MonoBehaviour
 
            // _audioSource.PlayOneShot(_audioClip);
         }
-
-
     }
+
 }

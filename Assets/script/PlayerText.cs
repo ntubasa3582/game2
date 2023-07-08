@@ -10,10 +10,11 @@ public class PlayerText : MonoBehaviour
     [SerializeField] Text _text2;
     [SerializeField] Text _text3;
     [SerializeField] Text _text4;
+    [SerializeField] Text _text5;
     public int _textcount;
     public int _blockcount;
     public AudioSource _audioSource;
-
+    public int _GameScore;
     // Start is called before the first frame update
     void Start()
     {
